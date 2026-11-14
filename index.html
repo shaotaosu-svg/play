@@ -6,13 +6,13 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Games">
+<meta name="apple-mobile-web-app-title" content="nunuplay">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#e9f1ff">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon.svg">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<title>Games</title>
+<title>nunuplay.com</title>
 <style>
 :root{
   --bg1:#e9f1ff; --bg2:#fdf0f6;
@@ -44,7 +44,10 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;touch-
 /* ---------- Home ---------- */
 #home{padding-left:0;padding-right:0}
 .home-top{display:flex;align-items:center;justify-content:space-between;padding:0 calc(var(--u)*5);flex:none}
-.hello{font-size:calc(var(--u)*6.6);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+/* The address is the brand: big enough to read when the screen is filmed */
+.brand{font-size:calc(var(--u)*8.2);font-weight:900;letter-spacing:-.03em;line-height:1.05}
+.brand b{font-weight:900;background:linear-gradient(100deg,#ff375f,#ff9f0a 45%,#0a84ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand i{font-style:normal;color:var(--ink2)}
 .sub{font-size:calc(var(--u)*3.3);color:var(--ink2);font-weight:600;margin-top:calc(var(--u)*.6)}
 .pager{flex:1;min-height:0;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;touch-action:pan-x;-webkit-overflow-scrolling:touch}
 .pager::-webkit-scrollbar{display:none}
@@ -306,8 +309,8 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;touch-
   <section class="screen" id="home">
     <div class="home-top">
       <div>
-        <div class="hello" id="hello">Hello!</div>
-        <div class="sub">Tap a game to play</div>
+        <div class="brand"><b>nunu</b>play<i>.com</i></div>
+        <div class="sub"><span id="hello">Hello!</span> Tap a game to play</div>
       </div>
       <button class="round" id="soundBtn" aria-label="Sound on or off">🔊</button>
     </div>
